@@ -1,7 +1,190 @@
+@use "reset";
+@use "colors" as *;
+@use "fonts" as *;
+@use "breakpoints" as *;
+
+body {
+  font-family: $open-sans;
+  font-size: 1.6rem;
+  background-color: $violet;
+  background-image: url("../images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include breakpoint(second) {
+    background-image: url("../images/bg-desktop.svg");
+    background-size: auto;
+  }
+}
+
+.container {
+  padding-block: 3.2rem;
+  margin: 0 auto;
+  width: 30rem;
+
+  @include breakpoint(first) {
+    width: 70rem;
+  }
+
+  @include breakpoint(second) {
+    width: min(95%, 128rem);
+  }
+}
+
+.hero {
+  width: 100%;
+  @include breakpoint(first) {
+    display: grid;
+    grid-template-areas:
+      "logo logo"
+      "mockups content";
+    grid-template-columns: 1fr 1fr;
+  }
+  @include breakpoint(second) {
+    grid-template-columns: max-content auto;
+  }
+
+  &__logo {
+    grid-area: logo;
+    width: 12rem;
+    margin-bottom: 6.4rem;
+
+    @include breakpoint(second) {
+      width: 20rem;
+      margin-bottom: 10rem;
+    }
+
+    &__img {
+      width: 100%;
+    }
+  }
+
+  &__mockups {
+    grid-area: mockups;
+    margin-bottom: 6.4rem;
+
+    // @include breakpoint(second) {
+    //   width: 100%;
+    // }
+
+    &__img {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    grid-area: content;
+    text-align: center;
+    margin-bottom: 6.4rem;
+    width: 100%;
+
+    @include breakpoint(first) {
+      text-align: left;
+      padding-top: 3.6rem;
+      padding-left: 5.8rem;
+    }
+
+    &__title {
+      font-family: $poppins;
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      line-height: 3.6rem;
+      margin-bottom: 1.6rem;
+
+      @include breakpoint(second) {
+        font-size: 4rem;
+        letter-spacing: -0.2px;
+        line-height: 6rem;
+        margin-bottom: 2.4rem;
+      }
+    }
+
+    &__desc {
+      line-height: 2.4rem;
+      margin-bottom: 2.4rem;
+
+      @include breakpoint(second) {
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+        margin-bottom: 2.8rem;
+      }
+    }
+
+    &__cta-btn {
+      width: 20rem;
+      height: 4rem;
+      border: none;
+      outline: none;
+      border-radius: 5rem;
+      background-color: white;
+      color: $violet;
+      font-family: $poppins;
+      font-size: 1.4rem;
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      transition: background-color 250ms ease-in, color 250ms ease-in,
+        box-shadow 250ms ease-in;
+
+      &:hover {
+        background-color: $soft-magenta;
+        color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+
+      @include breakpoint(second) {
+        font-size: 1.8rem;
+        height: 5.6rem;
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    width: max-content;
+    margin: 0 auto;
+
+    @include breakpoint(first) {
+      grid-column: 2;
+      margin: 0;
+      margin-left: auto;
+    }
+
+    &__link {
+      width: 2.6rem;
+      height: 2.6rem;
+      border: 1px solid white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-inline: 0.6rem;
+      cursor: pointer;
+      transition: border-color 250ms ease-in, color 250ms ease-in;
+
+      &:hover {
+        border-color: $soft-magenta;
+        color: $soft-magenta;
+      }
+
+      @include breakpoint(second) {
+        width: 3.8rem;
+        height: 3.8rem;
+      }
+    }
+  }
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-bottom: 1rem;
   a {
-    color: hsl(228, 45%, 44%);
+    color: $soft-magenta;
   }
 }

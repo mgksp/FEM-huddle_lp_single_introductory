@@ -3,12 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Huddle landing page with single introductory section</title>
   </head>
   <body>
-    Build The Community Your Fans Will Love Huddle re-imagines the way we build
-    communities. You have a voice, but so does your audience. Create connections
-    with your users as you engage in genuine discussion. Register
+    <div class="container">
+      <main class="hero">
+        <div class="hero__logo">
+          <img class="hero__logo__img" src="./images/logo.svg" alt="logo" />
+        </div>
+        <div class="hero__mockups">
+          <img
+            src="./images/illustration-mockups.svg"
+            alt="mockup"
+            class="hero__mockups__img"
+          />
+        </div>
+        <div class="hero__content">
+          <h1 class="hero__content__title">
+            Build The Community <br />
+            Your Fans Will Love
+          </h1>
+          <p class="hero__content__desc">
+            Huddle re-imagines the way we build communities. You have a voice,
+            but so does your audience. Create connections with your users as you
+            engage in genuine discussion.
+          </p>
+          <button class="hero__content__cta-btn">Register</button>
+        </div>
+        <div class="hero__socials">
+          <div class="hero__socials__link">
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+          <div class="hero__socials__link">
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+          <div class="hero__socials__link">
+            <i class="fa-brands fa-github"></i>
+          </div>
+        </div>
+      </main>
+    </div>
 
     <footer>
       <p class="attribution">
@@ -21,3 +69,4 @@
     </footer>
   </body>
 </html>
+

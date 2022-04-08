@@ -1,7 +1,202 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  background-color: hsl(257deg, 40%, 49%);
+  background-image: url("../images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 1050px) {
+  body {
+    background-image: url("../images/bg-desktop.svg");
+    background-size: auto;
+  }
+}
+
+.container {
+  padding-block: 3.2rem;
+  margin: 0 auto;
+  width: 30rem;
+}
+@media only screen and (min-width: 750px) {
+  .container {
+    width: 70rem;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  .container {
+    width: min(95%, 128rem);
+  }
+}
+
+.hero {
+  width: 100%;
+}
+@media only screen and (min-width: 750px) {
+  .hero {
+    display: grid;
+    grid-template-areas: "logo logo" "mockups content";
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  .hero {
+    grid-template-columns: -webkit-max-content auto;
+    grid-template-columns: max-content auto;
+  }
+}
+.hero__logo {
+  grid-area: logo;
+  width: 12rem;
+  margin-bottom: 6.4rem;
+}
+@media only screen and (min-width: 1050px) {
+  .hero__logo {
+    width: 20rem;
+    margin-bottom: 10rem;
+  }
+}
+.hero__logo__img {
+  width: 100%;
+}
+.hero__mockups {
+  grid-area: mockups;
+  margin-bottom: 6.4rem;
+}
+.hero__mockups__img {
+  width: 100%;
+}
+.hero__content {
+  grid-area: content;
+  text-align: center;
+  margin-bottom: 6.4rem;
+  width: 100%;
+}
+@media only screen and (min-width: 750px) {
+  .hero__content {
+    text-align: left;
+    padding-top: 3.6rem;
+    padding-left: 5.8rem;
+  }
+}
+.hero__content__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 3.6rem;
+  margin-bottom: 1.6rem;
+}
+@media only screen and (min-width: 1050px) {
+  .hero__content__title {
+    font-size: 4rem;
+    letter-spacing: -0.2px;
+    line-height: 6rem;
+    margin-bottom: 2.4rem;
+  }
+}
+.hero__content__desc {
+  line-height: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+@media only screen and (min-width: 1050px) {
+  .hero__content__desc {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    margin-bottom: 2.8rem;
+  }
+}
+.hero__content__cta-btn {
+  width: 20rem;
+  height: 4rem;
+  border: none;
+  outline: none;
+  border-radius: 5rem;
+  background-color: white;
+  color: hsl(257deg, 40%, 49%);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  transition: background-color 250ms ease-in, color 250ms ease-in, box-shadow 250ms ease-in;
+}
+.hero__content__cta-btn:hover {
+  background-color: hsl(300deg, 69%, 71%);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+@media only screen and (min-width: 1050px) {
+  .hero__content__cta-btn {
+    font-size: 1.8rem;
+    height: 5.6rem;
+  }
+}
+.hero__socials {
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 750px) {
+  .hero__socials {
+    grid-column: 2;
+    margin: 0;
+    margin-left: auto;
+  }
+}
+.hero__socials__link {
+  width: 2.6rem;
+  height: 2.6rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 0.6rem;
+  cursor: pointer;
+  transition: border-color 250ms ease-in, color 250ms ease-in;
+}
+.hero__socials__link:hover {
+  border-color: hsl(300deg, 69%, 71%);
+  color: hsl(300deg, 69%, 71%);
+}
+@media only screen and (min-width: 1050px) {
+  .hero__socials__link {
+    width: 3.8rem;
+    height: 3.8rem;
+  }
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-bottom: 1rem;
 }
 .attribution a {
-  color: hsl(228deg, 45%, 44%);
+  color: hsl(300deg, 69%, 71%);
 }
