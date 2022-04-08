@@ -68,9 +68,9 @@ body {
     grid-area: mockups;
     margin-bottom: 6.4rem;
 
-    // @include breakpoint(second) {
-    //   width: 100%;
-    // }
+    @include breakpoint(first) {
+      margin-bottom: 0;
+    }
 
     &__img {
       width: 100%;
@@ -87,6 +87,7 @@ body {
       text-align: left;
       padding-top: 3.6rem;
       padding-left: 5.8rem;
+      margin-bottom: 0;
     }
 
     &__title {
@@ -153,6 +154,7 @@ body {
       grid-column: 2;
       margin: 0;
       margin-left: auto;
+      margin-top: 2.8rem;
     }
 
     &__link {
